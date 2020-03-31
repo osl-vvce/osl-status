@@ -1,3 +1,9 @@
-# osl-status
+# OSL Weekly Status Report Assigner ![Update](https://img.shields.io/badge/April-2020-blue.svg?longCache=true&style=for-the-badge)
 
-Assigns a reportee to the reporter randomly every week.
+## What's this?
+
+The website displays a table with the reporter and the person responsible for submitting the report.
+
+## Technology Stack
+
+React.js
