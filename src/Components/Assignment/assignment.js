@@ -9,62 +9,70 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import {Typography} from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
-import {useFetch} from "./hooks";
+import {useFetch} from "../hooks";
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-export default function CustomizedTables() {
+export default function AssignmentTable() {
   const theme = createMuiTheme({
     palette: {
-      type: "dark"
-    }
+      type: "dark",
+    },
   });
 
-  const [data, loading] = useFetch("https://polar-depths-36905.herokuapp.com");
+  const [data, loading] = useFetch(
+    "https://polar-depths-36905.herokuapp.com/info"
+  );
 
   let reporter = loading ? [] : data[0];
 
-  let date = loading ? "" : data[1];
+  let date = loading ? "" : new Date(data[1]["_seconds"] * 1000);
 
   var responsible = [
-    "Shreevari SP",
-    "Sanjith PK",
     "Srikeerthi S",
+    "Sanjith PK",
+    "Suresh N",
+    "Pramod K",
+    "Shreevari SP",
+    "Sourabha G",
+    "Nagasandesh N",
+    "Samantha Paul",
+    "Aneesh Clinton D'Souza",
     "Umesh A",
-    "Chandan B Gowda",
-    "Swathi Meghana KR",
-    "Thushar K Nimbalkar",
+    "Soujanya N",
+    "Ashwin Kumar",
     "Kunal S",
     "Derryl Kevin Monis",
-    "Patil Chanchal Vinod",
     "Gaurav Purswani",
-    "Sourabha G.",
-    "Nithin jaikar",
-    "Manju M",
-    "Avinash Arun",
-    "Suresh N",
-    "Samantha Paul",
+    "Neha B",
     "Vibha Prasad",
-    "Aneesh Clinton D'Souza",
-    "Nagasandesh N",
-    "Ashwin",
-    "Pramod"
+    "Chandan B Gowda",
+    "Nithin Jaikar",
+    "Swathi Meghana K R",
+    "Thushar K Nimbalkar",
+    "Avinash Arun",
+    "Manju M",
+    "Nimesh M",
+    "Patil Chanchal Vinod",
+    "Vaibhav D S",
   ];
 
-  const StyledTableCell = withStyles(theme => ({
+  const StyledTableCell = withStyles((theme) => ({
     head: {
       backgroundColor: theme.palette.common.black,
-      color: theme.palette.common.white
+      color: theme.palette.common.white,
     },
     body: {
-      fontSize: 14
-    }
+      fontSize: 14,
+    },
   }))(TableCell);
 
-  const StyledTableRow = withStyles(theme => ({
+  const StyledTableRow = withStyles((theme) => ({
     root: {
       "&:nth-of-type(odd)": {
-        backgroundColor: theme.palette.background.default
-      }
-    }
+        backgroundColor: theme.palette.background.default,
+      },
+    },
   }))(TableRow);
 
   function createData(reporter, responsible) {
@@ -72,17 +80,24 @@ export default function CustomizedTables() {
   }
 
   const rows = [];
-  for (var i = 0; i < reporter.length; i++) {
-    rows.push(createData(reporter[i], responsible[i]));
+  for (var i = 0; i < responsible.length; i++) {
+    rows.push(createData(reporter[responsible[i]], responsible[i]));
   }
 
   const useStyles = makeStyles({
     table: {
-      minWidth: 300
+      minWidth: 300,
     },
     space: {
-      marginBottom: 30
-    }
+      marginBottom: 30,
+    },
+    spinner: {
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      marginTop: "-50px",
+      marginLeft: "-50px",
+    },
   });
 
   const classes = useStyles();
@@ -90,7 +105,13 @@ export default function CustomizedTables() {
   return (
     <>
       {loading ? (
-        "Loading ... "
+        <Loader
+          type="Puff"
+          color="#EEE"
+          height={100}
+          width={100}
+          className={classes.spinner}
+        />
       ) : (
         <ThemeProvider theme={theme}>
           <Typography
@@ -99,26 +120,23 @@ export default function CustomizedTables() {
             variant="h2"
             className="heading"
           >
-            OSL WEEKLY REPORT
+            SOURCE MAPPINGS
           </Typography>
           <div className={classes.space} />
           <Typography color="textPrimary" align="center" variant="h5">
-            {`Last Updated on ${date.substring(8, 10)}-${date.substring(
-              5,
-              7
-            )}-${date.substring(0, 4)}`}
+            {`Last updated on ${date.toDateString().substring(4)}`}
           </Typography>
           <div className={classes.space} />
           <TableContainer component={Paper}>
             <Table className={classes.table} aria-label="customized table">
               <TableHead>
                 <TableRow>
-                  <StyledTableCell>Reporter </StyledTableCell>
-                  <StyledTableCell align="right">Responsible</StyledTableCell>
+                  <StyledTableCell>Source </StyledTableCell>
+                  <StyledTableCell align="right">Reporter</StyledTableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
-                {rows.map(row => (
+                {rows.map((row) => (
                   <StyledTableRow key={row.reporter}>
                     <StyledTableCell component="th" scope="row">
                       {row.reporter}
