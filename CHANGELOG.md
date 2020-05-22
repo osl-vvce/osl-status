@@ -5,6 +5,8 @@
 ###### _22 May, 2020_
 
 - Implemented Usernames endpoint in individual member reports
+- Added USN's in members page
+- Fixed the Table for Mobile View
 
 ## v0.3.0
 

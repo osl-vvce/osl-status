@@ -117,7 +117,7 @@ const MemberReports = (props) => {
 
   const useStyles = makeStyles({
     table: {
-      minWidth: 300,
+      minWidth: 900,
     },
     space: {
       marginBottom: 30,
@@ -170,7 +170,7 @@ const MemberReports = (props) => {
                 {rows.map((row) => (
                   <StyledTableRow key={row.date}>
                     <StyledTableCell align="center">{row.date}</StyledTableCell>
-                    <StyledTableCell>{row.osl}</StyledTableCell>
+                    <StyledTableCell align="center">{row.osl}</StyledTableCell>
                     <StyledTableCell>
                       <div dangerouslySetInnerHTML={{__html: row.past}} />
                     </StyledTableCell>
