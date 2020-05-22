@@ -1,5 +1,11 @@
 # Change Log
 
+## v0.4.0
+
+###### _22 May, 2020_
+
+- Implemented Usernames endpoint in individual member reports
+
 ## v0.3.0
 
 ###### _19 May, 2020_

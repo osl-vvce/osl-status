@@ -17,34 +17,34 @@ const MemberTable = (props) => {
     },
   });
 
-  let member = [
-    "Srikeerthi S",
-    "Sanjith PK",
-    "Suresh N",
-    "Pramod K",
-    "Shreevari SP",
-    "Sourabha G",
-    "Nagasandesh N",
-    "Samantha Paul",
-    "Aneesh Clinton D'Souza",
-    "Umesh A",
-    "Soujanya N",
-    "Ashwin Kumar",
-    "Kunal S",
-    "Derryl Kevin Monis",
-    "Gaurav Purswani",
-    "Neha B",
-    "Vibha Prasad",
-    "Chandan B Gowda",
-    "Nithin Jaikar",
-    "Swathi Meghana K R",
-    "Thushar K Nimbalkar",
-    "Avinash Arun",
-    "Manju M",
-    "Nimesh M",
-    "Patil Chanchal Vinod",
-    "Vaibhav D S",
-  ];
+  let members = {
+    "Srikeerthi S": {usn: "4VV17CS096", username: "srikeerthi_s"},
+    "Sanjith PK": {usn: "4VV17CS082", username: "sanjithpk"},
+    "Suresh N": {usn: "4VV17CS102", username: "sureshn"},
+    "Pramod K": {usn: "4VV18CS060", username: "pramod7"},
+    "Shreevari SP": {usn: "4VV16CS100", username: "shreevari"},
+    "Sourabha G": {usn: "4VV18CS140", username: "sourabha"},
+    "Nagasandesh N": {usn: "4VV18CS084", username: "sandesh09"},
+    "Samantha Paul": {usn: "4VV17CS081", username: "paulease"},
+    "Aneesh Clinton D'Souza": {usn: "4VV19CS010", username: "clintondsza"},
+    "Umesh A": {usn: "4VV17CS107", username: "umesh_ar"},
+    "Soujanya N": {usn: "4VV18CS138", username: "soujanya"},
+    "Ashwin Kumar": {usn: "4VV16CS014", username: "zshzero"},
+    "Kunal S": {usn: "4VV19CS073", username: "kunal_s"},
+    "Derryl Kevin Monis": {usn: "4VV18CS034", username: "derrylkevin"},
+    "Gaurav Purswani": {usn: "4VV18CS044", username: "pingport80"},
+    "Neha B": {usn: "4VV19CS102", username: "neha_balaji"},
+    "Vibha Prasad": {usn: "4VV17CS114", username: "vibhaprasad"},
+    "Chandan B Gowda": {usn: "4VV19CS029", username: "chandan_b_gowda"},
+    "Nithin Jaikar": {usn: "4VV19EE407", username: "nith"},
+    "Swathi Meghana K R": {usn: "4VV19CS165", username: "swathi_kr"},
+    "Thushar K Nimbalkar": {usn: "4VV19ME140", username: "thusharkn"},
+    "Avinash Arun": {usn: "4VV19CS019", username: "dr_clueless"},
+    "Manju M": {usn: "4VV18CS075", username: "manju_m"},
+    "Nimesh M": {usn: "4VV18CS093", username: "nimeshm"},
+    "Patil Chanchal Vinod": {usn: "4VV18CS101", username: "chanchalvp"},
+    "Vaibhav D S": {usn: "4VV18CS165", username: "vaibhavds"},
+  };
 
   const StyledTableCell = withStyles((theme) => ({
     head: {
@@ -64,14 +64,17 @@ const MemberTable = (props) => {
     },
   }))(TableRow);
 
-  function createData(member) {
-    return {member};
+  function createData(member, usn, username) {
+    return {member, usn, username};
   }
 
   const rows = [];
-  for (var i = 0; i < member.length; i++) {
-    rows.push(createData(member[i]));
-  }
+
+  Object.keys(members).map((member) =>
+    rows.push(
+      createData(member, members[member]["usn"], members[member]["username"])
+    )
+  );
 
   const useStyles = makeStyles({
     table: {
@@ -108,21 +111,19 @@ const MemberTable = (props) => {
             <TableHead>
               <TableRow>
                 <StyledTableCell>Member </StyledTableCell>
+                <StyledTableCell align="right">USN </StyledTableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {rows.map((row) => (
                 <StyledTableRow key={row.member}>
                   <StyledTableCell component="th" scope="row">
-                    <Link
-                      color="inherit"
-                      href={`/members/${row.member.replace(
-                        /[^a-zA-Z]/gm,
-                        ""
-                      )}`.toLowerCase()}
-                    >
+                    <Link color="inherit" href={`/members/${row.username}`}>
                       {row.member}
                     </Link>
+                  </StyledTableCell>
+                  <StyledTableCell component="th" scope="row" align="right">
+                    {row.usn}
                   </StyledTableCell>
                 </StyledTableRow>
               ))}

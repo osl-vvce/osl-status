@@ -21,52 +21,48 @@ const MemberReports = (props) => {
     },
   });
 
+  let usernames = {
+    srikeerthi_s: "Srikeerthi S",
+    sanjithpk: "Sanjith PK",
+    sureshn: "Suresh N",
+    pramod7: "Pramod K",
+    shreevari: "Shreevari SP",
+    sourabha: "Sourabha G",
+    sandesh09: "Nagasandesh N",
+    paulease: "Samantha Paul",
+    clintondsza: "Aneesh Clinton D'Souza",
+    umesh_ar: "Umesh A",
+    soujanya: "Soujanya N",
+    zshzero: "Ashwin Kumar",
+    kunal_s: "Kunal S",
+    derrylkevin: "Derryl Kevin Monis",
+    pingport80: "Gaurav Purswani",
+    neha_balaji: "Neha B",
+    vibhaprasad: "Vibha Prasad",
+    chandan_b_gowda: "Chandan B Gowda",
+    nith: "Nithin Jaikar",
+    swathi_kr: "Swathi Meghana K R",
+    thusharkn: "Thushar K Nimbalkar",
+    dr_clueless: "Avinash Arun",
+    manju_m: "Manju M",
+    nimeshm: "Nimesh M",
+    chanchalvp: "Patil Chanchal Vinod",
+    vaibhavds: "Vaibhav D S",
+  };
+
+  let path = props.location.pathname;
+  let username = path.replace(/\/\w+\//, "");
+  let memberName = usernames[username];
+
+  const [date, loadingDate] = useFetch(
+    "https://polar-depths-36905.herokuapp.com/dates"
+  );
   const [data, loading] = useFetch(
-    "https://polar-depths-36905.herokuapp.com/reports"
+    `https://polar-depths-36905.herokuapp.com/reports/${username}`
   );
 
   let report = loading ? [] : data;
-  console.log(report);
-
-  let responsible = [
-    "Aneesh Clinton D'Souza",
-    "Ashwin Kumar",
-    "Avinash Arun",
-    "Chandan B Gowda",
-    "Derryl Kevin Monis",
-    "Gaurav Purswani",
-    "Kunal S",
-    "Manju M",
-    "Nagasandesh N",
-    "Neha B",
-    "Nimesh M",
-    "Nithin Jaikar",
-    "Patil Chanchal Vinod",
-    "Pramod K",
-    "Samantha Paul",
-    "Sanjith PK",
-    "Shreevari SP",
-    "Soujanya N",
-    "Sourabha G",
-    "Srikeerthi S",
-    "Suresh N",
-    "Swathi Meghana K R",
-    "Thushar K Nimbalkar",
-    "Umesh A",
-    "Vaibhav D S",
-    "Vibha Prasad",
-  ];
-
-  let username = props.location.pathname.replace(/^\/\w+\//gm, "");
-
-  let memberIdx = 0;
-
-  for (memberIdx = 0; memberIdx < responsible.length; memberIdx++)
-    if (
-      responsible[memberIdx].replace(/[^a-zA-Z]/gm, "").toLowerCase() ===
-      username
-    )
-      break;
+  let dates = loadingDate ? [] : date;
 
   const StyledTableCell = withStyles((theme) => ({
     head: {
@@ -87,7 +83,7 @@ const MemberReports = (props) => {
   }))(TableRow);
 
   let rows = [];
-  if (report.length > 0) {
+  if (Object.keys(report).length > 0 && dates.length > 0) {
     function createData(date, osl, past, future, fun, reporter) {
       return {date, osl, past, future, fun, reporter};
     }
@@ -101,13 +97,10 @@ const MemberReports = (props) => {
         "+0000 (Coordinated Universal Time)"
       );
     }
-
-    memberIdx++;
-    let dates = report[0].dates;
-    for (let i = 0; i < Object.keys(report[memberIdx]).length; i++) {
+    for (let i = 0; i < Object.keys(report).length; i++) {
       let date = UTCDate(dates[i]);
-      if (report[memberIdx][date]["timeStamp"]) {
-        const {osl, past, future, fun, reporter} = report[memberIdx][date];
+      if (report[date]["timeStamp"]) {
+        const {osl, past, future, fun, reporter} = report[date];
         rows.push(
           createData(
             date.substring(4, 15),
@@ -115,18 +108,6 @@ const MemberReports = (props) => {
             past.replace(/\n/g, "<br>"),
             future.replace(/\n/g, "<br>"),
             fun.replace(/\n/g, "<br>"),
-            reporter
-          )
-        );
-      } else {
-        const {reporter} = report[memberIdx][date];
-        rows.push(
-          createData(
-            date.substring(4, 15),
-            "Not Yet Updated",
-            "Not Yet Updated",
-            "Not Yet Updated",
-            "Not Yet Updated",
             reporter
           )
         );
@@ -154,7 +135,7 @@ const MemberReports = (props) => {
 
   return (
     <>
-      {loading ? (
+      {loading && loadingDate ? (
         <Loader
           type="Puff"
           color="#EEE"
@@ -170,9 +151,8 @@ const MemberReports = (props) => {
             variant="h2"
             className="heading"
           >
-            {responsible[--memberIdx]}
+            {memberName}
           </Typography>
-          <div className={classes.space} />
           <div className={classes.space} />
           <TableContainer component={Paper}>
             <Table className={classes.table} aria-label="customized table">

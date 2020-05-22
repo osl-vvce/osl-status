@@ -35,8 +35,6 @@ export default function LatestReport() {
     ? ""
     : new Date(data[0]["timeStamp"]["_seconds"] * 1000);
 
-  console.log(report);
-
   var responsible = [
     "Aneesh Clinton D'Souza",
     "Ashwin Kumar",
