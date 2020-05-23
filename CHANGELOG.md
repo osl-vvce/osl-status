@@ -5,7 +5,6 @@
 ###### _23 May, 2020_
 
 - Added 404 Not Found Page
-- Added a Footer
 
 ## v1.3.0
 
