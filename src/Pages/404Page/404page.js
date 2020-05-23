@@ -18,7 +18,7 @@ const NotFoundPage = () => {
       <span className="text">4</span>
       <img className="shuttle" src={shuttle} alt="404" />
       <span className="text">4</span>
-      <p className="bottom-text">PAGE NOT FOUND !</p>
+      <p className="bottom-text">This page doesn't exist.</p>
     </div>
   );
 };
