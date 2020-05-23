@@ -1,6 +1,13 @@
 # Change Log
 
-## v0.4.0
+## v1.4.0
+
+###### _23 May, 2020_
+
+- Added 404 Not Found Page
+- Added a Footer
+
+## v1.3.0
 
 ###### _22 May, 2020_
 
@@ -9,20 +16,20 @@
 - Fixed the Table for Mobile View
 - Added PWA Support
 
-## v0.3.0
+## v1.2.0
 
 ###### _19 May, 2020_
 
 - Added the OSL Report Page which displays the latest weekly report.
 - Added a circular laoder.
 
-## v0.2.0
+## v1.1.0
 
 ###### _17 May, 2020_
 
 - Added the Members Page with Report of each member till date.
 
-## v0.1.0
+## v1.0.0
 
 ###### _31 Mar, 2020_
 
