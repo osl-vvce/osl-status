@@ -115,8 +115,21 @@ export default function LatestReport() {
   }
 
   const useStyles = makeStyles({
+    container: {
+      "&::-webkit-scrollbar": {
+        width: "0.4em",
+      },
+      "&::-webkit-scrollbar-track": {
+        boxShadow: "inset 0 0 6px rgba(0,0,0,0.00)",
+        webkitBoxShadow: "inset 0 0 6px rgba(0,0,0,0.00)",
+      },
+      "&::-webkit-scrollbar-thumb": {
+        backgroundColor: "rgb(81, 81, 81);",
+        outline: "1px solid rgb(81, 81, 81);",
+      },
+    },
     table: {
-      minWidth: 300,
+      minWidth: 900,
     },
     space: {
       marginBottom: 30,
@@ -159,7 +172,7 @@ export default function LatestReport() {
               .substring(4)} to ${nextDate.toDateString().substring(4)}`}
           </Typography>
           <div className={classes.space} />
-          <TableContainer component={Paper}>
+          <TableContainer className={classes.container} component={Paper}>
             <Table className={classes.table} aria-label="customized table">
               <TableHead>
                 <TableRow>
@@ -176,7 +189,7 @@ export default function LatestReport() {
                     <StyledTableCell align="center">
                       {row.source}
                     </StyledTableCell>
-                    <StyledTableCell>{row.osl}</StyledTableCell>
+                    <StyledTableCell align="center">{row.osl}</StyledTableCell>
                     <StyledTableCell>
                       <div dangerouslySetInnerHTML={{__html: row.past}} />
                     </StyledTableCell>

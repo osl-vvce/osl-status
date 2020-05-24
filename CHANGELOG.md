@@ -1,5 +1,10 @@
 # Change Log
 
+## v1.4.1
+
+- Added CSS to Scrollbar
+- Increased the width of the mobile table view.
+
 ## v1.4.0
 
 ###### _23 May, 2020_

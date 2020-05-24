@@ -116,8 +116,21 @@ const MemberReports = (props) => {
   }
 
   const useStyles = makeStyles({
+    container: {
+      "&::-webkit-scrollbar": {
+        width: "0.4em",
+      },
+      "&::-webkit-scrollbar-track": {
+        boxShadow: "inset 0 0 6px rgba(0,0,0,0.00)",
+        webkitBoxShadow: "inset 0 0 6px rgba(0,0,0,0.00)",
+      },
+      "&::-webkit-scrollbar-thumb": {
+        backgroundColor: "rgb(81, 81, 81);",
+        outline: "1px solid rgb(81, 81, 81);",
+      },
+    },
     table: {
-      minWidth: 900,
+      minWidth: 1100,
     },
     space: {
       marginBottom: 30,
@@ -154,7 +167,7 @@ const MemberReports = (props) => {
             {memberName}
           </Typography>
           <div className={classes.space} />
-          <TableContainer component={Paper}>
+          <TableContainer className={classes.container} component={Paper}>
             <Table className={classes.table} aria-label="customized table">
               <TableHead>
                 <TableRow>
