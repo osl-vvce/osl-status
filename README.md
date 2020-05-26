@@ -31,6 +31,10 @@ Shows the list of members when clicked on gives all of there reports till date.
 - Start making small Pull Requests wherever you think you can help. The Management team will be handling the project and adding the features that you create as they come.
 - You can use the **OSL Status** card on Trello to discuss anything related to this project.
 
+## Releases
+
+Want to know what changed? Check [Releases](https://gitlab.com/osl-vvce/osl-status/-/releases)
+
 ## Technology Stack
 
 [React.js](https://www.reactjs.org)
