@@ -1,3 +1,10 @@
+## [1.4.3](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.2...v1.4.3) (2020-05-26)
+
+
+### Bug Fixes
+
+* updated CHANGELOG ([9b2a054](https://gitlab.com/osl-vvce/osl-status/commit/9b2a054fba4db35351dd42d338b605b8c6eebbb3))
+
 ## [1.4.2](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.1...v1.4.2) (2020-05-26)
 
 ### Bug Fixes
