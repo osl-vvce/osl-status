@@ -1,0 +1,11 @@
+stages:
+  - release
+
+before_script:
+  - npm i -D @semantic-release/gitlab @semantic-release/changelog @semantic-release/git
+
+publish:
+  image: node:12
+  stage: release
+  script:
+    - npx semantic-release
