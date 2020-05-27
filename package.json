@@ -40,8 +40,8 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       "@semantic-release/gitlab",
-      "@semantic-release/npm",
       "@semantic-release/changelog",
+      "@semantic-release/npm",
       "@semantic-release/git"
     ],
     "branch": "master"

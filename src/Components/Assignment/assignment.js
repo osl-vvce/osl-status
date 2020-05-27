@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {createMuiTheme, ThemeProvider} from "@material-ui/core/styles";
 import {withStyles, makeStyles} from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
@@ -9,9 +9,9 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import {Typography} from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
-import {useFetch} from "../hooks";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import memberList from "../../Data/memberList";
 
 export default function AssignmentTable() {
   const theme = createMuiTheme({
@@ -20,42 +20,21 @@ export default function AssignmentTable() {
     },
   });
 
-  const [data, loading] = useFetch(
-    "https://polar-depths-36905.herokuapp.com/info"
-  );
-
-  let reporter = loading ? [] : data[0];
-
-  let date = loading ? "" : new Date(data[1]["_seconds"] * 1000);
-
-  var responsible = [
-    "Srikeerthi S",
-    "Sanjith PK",
-    "Suresh N",
-    "Pramod K",
-    "Shreevari SP",
-    "Sourabha G",
-    "Nagasandesh N",
-    "Samantha Paul",
-    "Aneesh Clinton D'Souza",
-    "Umesh A",
-    "Soujanya N",
-    "Ashwin Kumar",
-    "Kunal S",
-    "Derryl Kevin Monis",
-    "Gaurav Purswani",
-    "Neha B",
-    "Vibha Prasad",
-    "Chandan B Gowda",
-    "Nithin Jaikar",
-    "Swathi Meghana K R",
-    "Thushar K Nimbalkar",
-    "Avinash Arun",
-    "Manju M",
-    "Nimesh M",
-    "Patil Chanchal Vinod",
-    "Vaibhav D S",
-  ];
+  const [loading, setLoading] = useState(true);
+  const [reporter, setReporter] = useState([]);
+  const [date, setDate] = useState("");
+  async function fetchUrl() {
+    const response = await fetch(
+      "https://polar-depths-36905.herokuapp.com/info"
+    );
+    const data = await response.json();
+    setReporter(data[0]);
+    setDate(new Date(data[1]["_seconds"] * 1000));
+    setLoading(false);
+  }
+  useEffect(() => {
+    fetchUrl();
+  }, []);
 
   const StyledTableCell = withStyles((theme) => ({
     head: {
@@ -75,13 +54,13 @@ export default function AssignmentTable() {
     },
   }))(TableRow);
 
-  function createData(reporter, responsible) {
-    return {reporter, responsible};
+  function createData(source, reporter) {
+    return {source, reporter};
   }
 
   const rows = [];
-  for (var i = 0; i < responsible.length; i++) {
-    rows.push(createData(reporter[responsible[i]], responsible[i]));
+  for (let i = 0; i < memberList.length; i++) {
+    rows.push(createData(reporter[memberList[i]], memberList[i]));
   }
 
   const useStyles = makeStyles({
@@ -137,12 +116,12 @@ export default function AssignmentTable() {
               </TableHead>
               <TableBody>
                 {rows.map((row) => (
-                  <StyledTableRow key={row.reporter}>
+                  <StyledTableRow key={row.source}>
                     <StyledTableCell component="th" scope="row">
-                      {row.reporter}
+                      {row.source}
                     </StyledTableCell>
                     <StyledTableCell align="right">
-                      {row.responsible}
+                      {row.reporter}
                     </StyledTableCell>
                   </StyledTableRow>
                 ))}

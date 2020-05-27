@@ -1,9 +1,8 @@
 ## [1.4.3](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.2...v1.4.3) (2020-05-26)
 
-
 ### Bug Fixes
 
-* updated CHANGELOG ([9b2a054](https://gitlab.com/osl-vvce/osl-status/commit/9b2a054fba4db35351dd42d338b605b8c6eebbb3))
+- updated CHANGELOG ([9b2a054](https://gitlab.com/osl-vvce/osl-status/commit/9b2a054fba4db35351dd42d338b605b8c6eebbb3))
 
 ## [1.4.2](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.1...v1.4.2) (2020-05-26)
 
@@ -12,6 +11,8 @@
 - updated README ([2f57050](https://gitlab.com/osl-vvce/osl-status/commit/2f57050af074e3598250787f701cd2c3cc42c884))
 
 ## v1.4.1
+
+###### _24 May, 2020_
 
 - Added CSS to Scrollbar
 - Increased the width of the mobile table view.
