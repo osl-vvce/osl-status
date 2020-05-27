@@ -1,3 +1,10 @@
+## [1.4.4](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.3...v1.4.4) (2020-05-27)
+
+
+### Bug Fixes
+
+* Refactored the code for Assignment Component to make it more readable. ([4725b3e](https://gitlab.com/osl-vvce/osl-status/commit/4725b3e1ee409f52c52e54bce693ad13c92d78a2))
+
 ## [1.4.3](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.2...v1.4.3) (2020-05-26)
 
 ### Bug Fixes
