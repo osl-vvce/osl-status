@@ -26,15 +26,11 @@ const MemberReports = (props) => {
   let username = path.replace(/\/\w+\//, "");
   let memberName = usernames[username];
 
-  const [date, loadingDate] = useFetch(
-    "https://polar-depths-36905.herokuapp.com/dates"
-  );
   const [data, loading] = useFetch(
     `https://polar-depths-36905.herokuapp.com/reports/${username}`
   );
 
   let report = loading ? [] : data;
-  let dates = loadingDate ? [] : date;
 
   const StyledTableCell = withStyles((theme) => ({
     head: {
@@ -55,22 +51,13 @@ const MemberReports = (props) => {
   }))(TableRow);
 
   let rows = [];
-  if (Object.keys(report).length > 0 && dates.length > 0) {
+  if (Object.keys(report).length > 0) {
     function createData(date, osl, past, future, fun, reporter) {
       return {date, osl, past, future, fun, reporter};
     }
 
-    function UTCDate(date) {
-      date = new Date(date["_seconds"] * 1000);
-      let dateGMT = date.toUTCString();
-      return (
-        date.toString().substring(0, 15) +
-        dateGMT.substring(16, 29) +
-        "+0000 (Coordinated Universal Time)"
-      );
-    }
     for (let i = 0; i < Object.keys(report).length; i++) {
-      let date = UTCDate(dates[i]);
+      let date = Object.keys(report)[i];
       if (report[date]["timeStamp"]) {
         const {osl, past, future, fun, reporter} = report[date];
         rows.push(
@@ -120,7 +107,7 @@ const MemberReports = (props) => {
 
   return (
     <>
-      {loading && loadingDate ? (
+      {loading ? (
         <Loader
           type="Puff"
           color="#EEE"
