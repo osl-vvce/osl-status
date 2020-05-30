@@ -1,7 +1,7 @@
 {
   "name": "osl-status",
   "private": true,
-  "version": "1.4.4",
+  "version": "1.4.5",
   "dependencies": {
     "@material-ui/core": "^4.9.7",
     "@material-ui/icons": "^4.9.1",
@@ -125,6 +125,7 @@
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
-    "@semantic-release/gitlab": "^6.0.4"
+    "@semantic-release/gitlab": "^6.0.4",
+    "conventional-changelog-conventionalcommits": "^4.3.0"
   }
 }

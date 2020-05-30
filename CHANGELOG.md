@@ -1,3 +1,10 @@
+### [1.4.5](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.4...v1.4.5) (2020-05-30)
+
+
+### Bug Fixes
+
+* Fixed the Member Reports Page and deleted some redundent code. ([3a6742f](https://gitlab.com/osl-vvce/osl-status/commit/3a6742f56400196f8ac390242932d7ada8c36f00))
+
 ## [1.4.4](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.3...v1.4.4) (2020-05-27)
 
 
