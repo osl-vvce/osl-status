@@ -12,6 +12,7 @@ import Paper from "@material-ui/core/Paper";
 import {useFetch} from "../hooks";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import {memberList} from "../../Data/data.json";
 
 export default function LatestReport() {
   const theme = createMuiTheme({
@@ -34,35 +35,6 @@ export default function LatestReport() {
   let nextDate = loading
     ? ""
     : new Date(data[0]["timeStamp"]["_seconds"] * 1000);
-
-  var responsible = [
-    "Aneesh Clinton D'Souza",
-    "Ashwin Kumar",
-    "Avinash Arun",
-    "Chandan B Gowda",
-    "Derryl Kevin Monis",
-    "Gaurav Purswani",
-    "Kunal S",
-    "Manju M",
-    "Nagasandesh N",
-    "Neha B",
-    "Nimesh M",
-    "Nithin Jaikar",
-    "Patil Chanchal Vinod",
-    "Pramod K",
-    "Samantha Paul",
-    "Sanjith PK",
-    "Shreevari SP",
-    "Soujanya N",
-    "Sourabha G",
-    "Srikeerthi S",
-    "Suresh N",
-    "Swathi Meghana K R",
-    "Thushar K Nimbalkar",
-    "Umesh A",
-    "Vaibhav D S",
-    "Vibha Prasad",
-  ];
 
   const StyledTableCell = withStyles((theme) => ({
     head: {
@@ -98,12 +70,12 @@ export default function LatestReport() {
     }
     let dates = report[0].dates;
     let latestDate = UTCDate(dates[dates.length - 1]);
-    for (let memberIdx = 1; memberIdx < responsible.length + 1; memberIdx++) {
+    for (let memberIdx = 1; memberIdx < memberList.length + 1; memberIdx++) {
       if (report[memberIdx][latestDate]["timeStamp"]) {
         const {osl, past, future, reporter} = report[memberIdx][latestDate];
         rows.push(
           createData(
-            responsible[memberIdx - 1],
+            memberList[memberIdx - 1],
             osl[0].toUpperCase() + osl.slice(1),
             past.replace(/\n/g, "<br>"),
             future.replace(/\n/g, "<br>"),

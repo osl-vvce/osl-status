@@ -13,6 +13,7 @@ import {useFetch} from "../hooks";
 import {withRouter} from "react-router-dom";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import {usernames} from "../../Data/data.json";
 
 const MemberReports = (props) => {
   const theme = createMuiTheme({
@@ -20,35 +21,6 @@ const MemberReports = (props) => {
       type: "dark",
     },
   });
-
-  let usernames = {
-    srikeerthi_s: "Srikeerthi S",
-    sanjithpk: "Sanjith PK",
-    sureshn: "Suresh N",
-    pramod7: "Pramod K",
-    shreevari: "Shreevari SP",
-    sourabha: "Sourabha G",
-    sandesh09: "Nagasandesh N",
-    paulease: "Samantha Paul",
-    clintondsza: "Aneesh Clinton D'Souza",
-    umesh_ar: "Umesh A",
-    soujanya: "Soujanya N",
-    zshzero: "Ashwin Kumar",
-    kunal_s: "Kunal S",
-    derrylkevin: "Derryl Kevin Monis",
-    pingport80: "Gaurav Purswani",
-    neha_balaji: "Neha B",
-    vibhaprasad: "Vibha Prasad",
-    chandan_b_gowda: "Chandan B Gowda",
-    nith: "Nithin Jaikar",
-    swathi_kr: "Swathi Meghana K R",
-    thusharkn: "Thushar K Nimbalkar",
-    dr_clueless: "Avinash Arun",
-    manju_m: "Manju M",
-    nimeshm: "Nimesh M",
-    chanchalvp: "Patil Chanchal Vinod",
-    vaibhavds: "Vaibhav D S",
-  };
 
   let path = props.location.pathname;
   let username = path.replace(/\/\w+\//, "");

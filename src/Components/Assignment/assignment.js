@@ -11,7 +11,7 @@ import {Typography} from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import memberList from "../../Data/memberList";
+import {memberList} from "../../Data/data.json";
 
 export default function AssignmentTable() {
   const theme = createMuiTheme({
@@ -23,17 +23,17 @@ export default function AssignmentTable() {
   const [loading, setLoading] = useState(true);
   const [reporter, setReporter] = useState([]);
   const [date, setDate] = useState("");
-  async function fetchUrl() {
-    const response = await fetch(
-      "https://polar-depths-36905.herokuapp.com/info"
-    );
+
+  async function fetchUrl(url) {
+    const response = await fetch(url);
     const data = await response.json();
     setReporter(data[0]);
     setDate(new Date(data[1]["_seconds"] * 1000));
     setLoading(false);
   }
+
   useEffect(() => {
-    fetchUrl();
+    fetchUrl("https://polar-depths-36905.herokuapp.com/info");
   }, []);
 
   const StyledTableCell = withStyles((theme) => ({
