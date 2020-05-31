@@ -5,7 +5,7 @@ import "./404page.css";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    margin: "10vw 0",
+    margin: "5vw 0",
     textAlign: "center",
   },
 }));
