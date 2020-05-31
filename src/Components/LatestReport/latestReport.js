@@ -12,7 +12,7 @@ import Paper from "@material-ui/core/Paper";
 import {useFetch} from "../hooks";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import {memberList} from "../../Data/data.json";
+import {memberList} from "../../Assets/data.json";
 
 export default function LatestReport() {
   const theme = createMuiTheme({
