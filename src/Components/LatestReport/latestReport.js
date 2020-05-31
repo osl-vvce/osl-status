@@ -25,6 +25,8 @@ export default function LatestReport() {
     "https://polar-depths-36905.herokuapp.com/reports"
   );
 
+  memberList.sort();
+
   let report = loading ? [] : data;
 
   let dates = loading ? [0] : data[0]["dates"];
