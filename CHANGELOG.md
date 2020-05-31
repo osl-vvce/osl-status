@@ -1,3 +1,10 @@
+## [1.5.0](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.5...v1.5.0) (2020-05-31)
+
+
+### Features
+
+* Adding a Username Not Found Page ([51481c5](https://gitlab.com/osl-vvce/osl-status/commit/51481c5541dff894d08700cd23277ac3c22e4344))
+
 ### [1.4.5](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.4...v1.4.5) (2020-05-30)
 
 
