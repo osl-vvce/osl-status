@@ -1,3 +1,10 @@
+### [1.5.1](https://gitlab.com/osl-vvce/osl-status/compare/v1.5.0...v1.5.1) (2020-05-31)
+
+
+### Bug Fixes
+
+* Fixed the Latest Report Page ([520f3f6](https://gitlab.com/osl-vvce/osl-status/commit/520f3f61a1941a6bcd3420c0f74f0e61cf213abe))
+
 ## [1.5.0](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.5...v1.5.0) (2020-05-31)
 
 ### Features
