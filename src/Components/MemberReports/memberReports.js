@@ -13,7 +13,8 @@ import {useFetch} from "../hooks";
 import {withRouter} from "react-router-dom";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import {usernames} from "../../Data/data.json";
+import {usernames} from "../../Assets/data.json";
+import UsernameNotFound from "../UsernameNotFound/usernameNotFound";
 
 const MemberReports = (props) => {
   const theme = createMuiTheme({
@@ -26,9 +27,11 @@ const MemberReports = (props) => {
   let username = path.replace(/\/\w+\//, "");
   let memberName = usernames[username];
 
-  const [data, loading] = useFetch(
+  let [data, loading] = useFetch(
     `https://polar-depths-36905.herokuapp.com/reports/${username}`
   );
+
+  if (username in usernames === false) loading = false;
 
   let report = loading ? [] : data;
 
@@ -115,7 +118,7 @@ const MemberReports = (props) => {
           width={100}
           className={classes.spinner}
         />
-      ) : (
+      ) : username in usernames ? (
         <ThemeProvider theme={theme}>
           <Typography
             color="textPrimary"
@@ -161,6 +164,8 @@ const MemberReports = (props) => {
             </Table>
           </TableContainer>
         </ThemeProvider>
+      ) : (
+        <UsernameNotFound />
       )}
     </>
   );

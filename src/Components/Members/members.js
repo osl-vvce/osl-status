@@ -9,7 +9,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import {Typography, Link} from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
-import {memberData} from "../../Data/data.json";
+import {memberData} from "../../Assets/data.json";
 
 const MemberTable = (props) => {
   const theme = createMuiTheme({
