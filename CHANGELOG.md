@@ -11,25 +11,25 @@
 
 - Fixed the Member Reports Page and deleted some redundent code. ([3a6742f](https://gitlab.com/osl-vvce/osl-status/commit/3a6742f56400196f8ac390242932d7ada8c36f00))
 
-## [1.4.4](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.3...v1.4.4) (2020-05-27)
+### [1.4.4](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.3...v1.4.4) (2020-05-27)
 
 ### Refactor
 
 - Refactored the code for Assignment Component to make it more readable. ([4725b3e](https://gitlab.com/osl-vvce/osl-status/commit/4725b3e1ee409f52c52e54bce693ad13c92d78a2))
 
-## [1.4.3](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.2...v1.4.3) (2020-05-26)
+### [1.4.3](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.2...v1.4.3) (2020-05-26)
 
 ### Documentation
 
 - updated CHANGELOG ([9b2a054](https://gitlab.com/osl-vvce/osl-status/commit/9b2a054fba4db35351dd42d338b605b8c6eebbb3))
 
-## [1.4.2](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.1...v1.4.2) (2020-05-26)
+### [1.4.2](https://gitlab.com/osl-vvce/osl-status/compare/v1.4.1...v1.4.2) (2020-05-26)
 
 ### Documentation
 
 - updated README ([2f57050](https://gitlab.com/osl-vvce/osl-status/commit/2f57050af074e3598250787f701cd2c3cc42c884))
 
-## v1.4.1
+### v1.4.1
 
 ###### _24 May, 2020_
 
