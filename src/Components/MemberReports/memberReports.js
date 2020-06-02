@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {createMuiTheme, ThemeProvider} from "@material-ui/core/styles";
 import {withStyles, makeStyles} from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
@@ -9,7 +9,6 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import {Typography} from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
-import {useFetch} from "../hooks";
 import {withRouter} from "react-router-dom";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -27,13 +26,21 @@ const MemberReports = (props) => {
   let username = path.replace(/\/\w+\//, "");
   let memberName = usernames[username];
 
-  let [data, loading] = useFetch(
-    `https://polar-depths-36905.herokuapp.com/reports/${username}`
-  );
+  let [loading, setLoading] = useState(true);
+  const [report, setReport] = useState([]);
+
+  async function fetchUrl(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    setReport(data);
+    setLoading(false);
+  }
+
+  useEffect(() => {
+    fetchUrl(`https://polar-depths-36905.herokuapp.com/reports/${username}`);
+  }, [username]);
 
   if (username in usernames === false) loading = false;
-
-  let report = loading ? [] : data;
 
   const StyledTableCell = withStyles((theme) => ({
     head: {
@@ -58,9 +65,7 @@ const MemberReports = (props) => {
     function createData(date, osl, past, future, fun, reporter) {
       return {date, osl, past, future, fun, reporter};
     }
-
-    for (let i = 0; i < Object.keys(report).length; i++) {
-      let date = Object.keys(report)[i];
+    Object.keys(report).forEach((date) => {
       if (report[date]["timeStamp"]) {
         const {osl, past, future, fun, reporter} = report[date];
         rows.push(
@@ -74,7 +79,7 @@ const MemberReports = (props) => {
           )
         );
       }
-    }
+    });
   }
 
   const useStyles = makeStyles({
