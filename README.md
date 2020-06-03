@@ -1,4 +1,4 @@
-# OSL Weekly Report Website ![Update](https://img.shields.io/badge/May-2020-blue.svg?longCache=true&style=for-the-badge)
+# OSL Weekly Report Website ![Update](https://img.shields.io/badge/June-2020-blue.svg?longCache=true&style=for-the-badge)
 
 ## What's this?
 

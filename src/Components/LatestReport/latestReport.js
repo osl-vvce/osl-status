@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import {createMuiTheme, ThemeProvider} from "@material-ui/core/styles";
 import {withStyles, makeStyles} from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
@@ -9,7 +9,6 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import {Typography} from "@material-ui/core";
 import Paper from "@material-ui/core/Paper";
-import {useFetch} from "../hooks";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import {memberList} from "../../Assets/data.json";
@@ -21,22 +20,32 @@ export default function LatestReport() {
     },
   });
 
-  const [data, loading] = useFetch(
-    "https://polar-depths-36905.herokuapp.com/reports"
-  );
+  const [loading, setLoading] = useState(true);
+  const [report, setReport] = useState([]);
+  const [dateInterval, setDateInterval] = useState({
+    date: "",
+    nextDate: "",
+  });
+
+  async function fetchUrl(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    const dates = data[0]["dates"];
+    setReport(data);
+    setDateInterval({
+      date: new Date(dates[dates.length - 1]["_seconds"] * 1000),
+      nextDate: new Date(data[0]["timeStamp"]["_seconds"] * 1000),
+    });
+    setLoading(false);
+  }
+
+  useEffect(() => {
+    fetchUrl("https://polar-depths-36905.herokuapp.com/reports");
+  }, []);
+
+  const {date, nextDate} = dateInterval;
 
   memberList.sort();
-
-  let report = loading ? [] : data;
-
-  let dates = loading ? [0] : data[0]["dates"];
-  let date = loading
-    ? ""
-    : new Date(dates[dates.length - 1]["_seconds"] * 1000);
-  date = loading ? "" : new Date(date.setDate(date.getDate() - 7));
-  let nextDate = loading
-    ? ""
-    : new Date(data[0]["timeStamp"]["_seconds"] * 1000);
 
   const StyledTableCell = withStyles((theme) => ({
     head: {
