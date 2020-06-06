@@ -1,3 +1,12 @@
+# Changelog
+
+### [1.5.3](https://gitlab.com/osl-vvce/osl-status/compare/v1.5.2...v1.5.3) (2020-06-06)
+
+
+### Bug Fixes
+
+* Fixed the Source Reporter Mappings Page and the Latest Repport Page ([532ed14](https://gitlab.com/osl-vvce/osl-status/commit/532ed14b2b2171c89904e6ddce3861fdb732b158))
+
 ### [1.5.2](https://gitlab.com/osl-vvce/osl-status/compare/v1.5.1...v1.5.2) (2020-06-03)
 
 
