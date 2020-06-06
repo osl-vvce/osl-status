@@ -117,7 +117,12 @@
       ],
       "@semantic-release/gitlab",
       "@semantic-release/npm",
-      "@semantic-release/changelog",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogTitle": "# Changelog"
+        }
+      ],
       "@semantic-release/git"
     ],
     "branch": "master"
