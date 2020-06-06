@@ -1,3 +1,10 @@
+### [1.5.2](https://gitlab.com/osl-vvce/osl-status/compare/v1.5.1...v1.5.2) (2020-06-03)
+
+
+### Performance Improvements
+
+* Removed the Material Icons CDN ([3c298a8](https://gitlab.com/osl-vvce/osl-status/commit/3c298a8495a0aef4314f37f64fa58320b9b92df8))
+
 ### [1.5.1](https://gitlab.com/osl-vvce/osl-status/compare/v1.5.0...v1.5.1) (2020-05-31)
 
 
