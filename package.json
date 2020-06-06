@@ -1,7 +1,7 @@
 {
   "name": "osl-status",
   "private": true,
-  "version": "1.5.2",
+  "version": "1.5.3",
   "dependencies": {
     "@material-ui/core": "^4.9.7",
     "@material-ui/icons": "^4.9.1",
