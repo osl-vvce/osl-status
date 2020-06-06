@@ -31,9 +31,10 @@ export default function LatestReport() {
     const response = await fetch(url);
     const data = await response.json();
     const dates = data[0]["dates"];
+    const date = new Date(dates[dates.length - 1]["_seconds"] * 1000);
     setReport(data);
     setDateInterval({
-      date: new Date(dates[dates.length - 1]["_seconds"] * 1000),
+      date: new Date(date.setDate(date.getDate() - 7)),
       nextDate: new Date(data[0]["timeStamp"]["_seconds"] * 1000),
     });
     setLoading(false);
@@ -82,7 +83,10 @@ export default function LatestReport() {
     let dates = report[0].dates;
     let latestDate = UTCDate(dates[dates.length - 1]);
     for (let memberIdx = 1; memberIdx < memberList.length + 1; memberIdx++) {
-      if (report[memberIdx][latestDate]["timeStamp"]) {
+      if (
+        report[memberIdx][latestDate] &&
+        report[memberIdx][latestDate]["timeStamp"]
+      ) {
         const {osl, past, future, reporter} = report[memberIdx][latestDate];
         rows.push(
           createData(

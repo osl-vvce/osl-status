@@ -60,7 +60,8 @@ export default function AssignmentTable() {
 
   const rows = [];
   for (let i = 0; i < memberList.length; i++) {
-    rows.push(createData(reporter[memberList[i]], memberList[i]));
+    if (reporter[memberList[i]])
+      rows.push(createData(reporter[memberList[i]], memberList[i]));
   }
 
   const useStyles = makeStyles({
