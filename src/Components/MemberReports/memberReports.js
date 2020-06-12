@@ -62,16 +62,15 @@ const MemberReports = (props) => {
 
   let rows = [];
   if (Object.keys(report).length > 0) {
-    function createData(id, date, osl, past, future, fun, reporter) {
-      return {id, date, osl, past, future, fun, reporter};
+    function createData(date, osl, past, future, fun, reporter) {
+      return {date, osl, past, future, fun, reporter};
     }
-    Object.keys(report).forEach((currentDate) => {
-      if (report[currentDate]["timeStamp"]) {
-        const {osl, past, future, fun, reporter, date} = report[currentDate];
+    Object.keys(report).forEach((date) => {
+      if (report[date]["timeStamp"]) {
+        const {osl, past, future, fun, reporter} = report[date];
         rows.push(
           createData(
-            date._seconds,
-            new Date(date._seconds * 1000).toUTCString().substring(4, 16),
+            date.substring(4, 15),
             osl[0].toUpperCase() + osl.slice(1),
             past.replace(/\n/g, "<br>"),
             future.replace(/\n/g, "<br>"),
@@ -82,16 +81,6 @@ const MemberReports = (props) => {
       }
     });
   }
-
-  function sortRowsByDate(array) {
-    return array.sort(function(a, b) {
-      var x = a.id;
-      var y = b.id;
-      return x > y ? -1 : x < y ? 1 : 0;
-    });
-  }
-
-  rows = sortRowsByDate(rows);
 
   const useStyles = makeStyles({
     container: {
