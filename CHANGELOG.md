@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.6.1](https://gitlab.com/osl-vvce/osl-status/compare/v1.6.0...v1.6.1) (2020-06-12)
+
+
+### Reverts
+
+* Revert "feat: Member Reports Page now displays the reports by latest first order" ([ee6fee3](https://gitlab.com/osl-vvce/osl-status/commit/ee6fee30edae980aedbf0a5854234ec8407446da))
+
 ## [1.6.0](https://gitlab.com/osl-vvce/osl-status/compare/v1.5.3...v1.6.0) (2020-06-12)
 
 
