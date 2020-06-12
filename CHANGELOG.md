@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://gitlab.com/osl-vvce/osl-status/compare/v1.5.3...v1.6.0) (2020-06-12)
+
+
+### Features
+
+* Member Reports Page now displays the reports by latest first order ([e1c84b0](https://gitlab.com/osl-vvce/osl-status/commit/e1c84b0f3a423fe1f088e98444eec1afe5e78d30))
+
 ### [1.5.3](https://gitlab.com/osl-vvce/osl-status/compare/v1.5.2...v1.5.3) (2020-06-06)
 
 
