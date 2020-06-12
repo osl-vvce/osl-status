@@ -71,17 +71,13 @@ export default function LatestReport() {
     function createData(source, osl, past, future, reporter) {
       return {source, osl, past, future, reporter};
     }
-    function UTCDate(date) {
+    function ISODate(date) {
       date = new Date(date["_seconds"] * 1000);
-      let dateGMT = date.toUTCString();
-      return (
-        date.toString().substring(0, 15) +
-        dateGMT.substring(16, 29) +
-        "+0000 (Coordinated Universal Time)"
-      );
+      let ISOString = new Date(date).toISOString();
+      return ISOString.substring(0, 10);
     }
     let dates = report[0].dates;
-    let latestDate = UTCDate(dates[dates.length - 1]);
+    let latestDate = ISODate(dates[dates.length - 1]);
     for (let memberIdx = 1; memberIdx < memberList.length + 1; memberIdx++) {
       if (
         report[memberIdx][latestDate] &&
