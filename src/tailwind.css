@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Montserrat", sans-serif;
+  @apply bg-bg;
+  padding-top: 65px;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #222;
+  box-shadow: inset 0 0 5px #333;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  @apply text-default;
+}
+
+@media only and (min-width: 1024px) {
+  .table {
+    min-width: 600px;
+  }
+}

@@ -42,7 +42,8 @@ Want to know what changed? Check [Releases](https://gitlab.com/osl-vvce/osl-stat
 
 ## Technology Stack
 
-[React.js](https://www.reactjs.org) <br />
-[Material-UI](https://material-ui.com/)
+- [React.js](https://www.reactjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [TypeScript](https://www.typescriptlang.org)
 
 Happy Coding!
