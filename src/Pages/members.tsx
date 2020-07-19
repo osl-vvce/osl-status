@@ -23,8 +23,8 @@ const MembersPage = () => {
   return (
     <React.Fragment>
       <div className="bg-bgalt flex flex-col items-center px-6 lg:px-12">
-        <h1 className="text-3xl lg:text-6xl uppercase mt-2">Members</h1>
-        <div className="my-12">
+        <h1 className="text-3xl lg:text-6xl uppercase mt-6">Members</h1>
+        <div className="my-6 lg:my-12">
           <table className="text-default">
             <thead className="bg-bg">
               <tr>

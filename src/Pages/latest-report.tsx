@@ -93,11 +93,11 @@ const ReportPage = () => {
         </div>
       ) : (
         <div className="bg-bgalt flex flex-col items-center px-6 lg:px-12">
-          <h1 className="text-3xl lg:text-6xl uppercase mt-2">Report</h1>
+          <h1 className="text-3xl lg:text-6xl uppercase mt-6">Report</h1>
           <h2 className="text-lg lg:text-2xl mt-2">{`${date
             .toDateString()
             .substring(4)} to ${nextDate.toDateString().substring(4)}`}</h2>
-          <div className="my-12 overflow-x-auto w-full flex lg:justify-center">
+          <div className="my-6 lg:my-12 overflow-x-auto w-full flex lg:justify-center">
             <table className="text-default" style={{ minWidth: "1200px" }}>
               <thead className="bg-bg">
                 <tr>

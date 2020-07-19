@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 export default function Navbar() {
   return (
     <header className="fixed top-0 w-full">
-      <div className="flex bg-bg p-4 justify-between uppercase items-center">
+      <div className="flex bg-bg p-2 lg:p-4 justify-between uppercase items-center">
         <Link to="/">
           <h1 className="lg:text-xl font-semibold">OSL Weekly</h1>
         </Link>
