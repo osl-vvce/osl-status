@@ -1,6 +1,6 @@
 # OSL Weekly Report Website
 
-![Update](https://img.shields.io/badge/June-2020-blue.svg?longCache=true&style=for-the-badge)
+![Update](https://img.shields.io/badge/July-2020-blue.svg?longCache=true&style=for-the-badge)
 ![Gitlab package.json version](https://img.shields.io/badge/dynamic/json?color=blue&label=version&query=version&url=https://gitlab.com/osl-vvce/osl-status/-/raw/master/package.json&style=for-the-badge)
 ![Gitlab Workflow Status](https://img.shields.io/badge/buiild-passing-blue?style=for-the-badge)
 ![Gitlab](https://img.shields.io/badge/license-mit-blue?style=for-the-badge)
@@ -11,7 +11,7 @@ This website was created to view the weekly status reports of different members 
 
 ## Website
 
-[OSL Status Website](https://osl-status.netlify.app)
+[OSL Status Website](https://status.oslvvce.com)
 
 ## Features
 
