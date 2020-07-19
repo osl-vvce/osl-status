@@ -9,11 +9,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bg: "#111",
-        bgalt: "#222",
-        default: "#eee",
-        tbody: "#1a1a1a",
-        tbodyalt: "#1e1e1e"
+        bg: "var(--bg)",
+        bgalt: "var(--bgalt)",
+        default: "var(--default)",
+        tbody: "var(--tbody)",
+        tbodyalt: "var(--tbodyalt)"
       },
       fontSize: {
         "8xl": "8rem",

@@ -7,12 +7,12 @@ import {
   AiFillLinkedin
 } from "react-icons/ai"
 
-export default function Footer({ children }: any) {
+const Footer: React.FC = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen-90">
+    <div className="bg-bg flex flex-col min-h-screen">
       {children}
       <hr />
-      <footer className="flex flex-col justify-center items-center mt-auto">
+      <footer className="bg-bg flex flex-col justify-center items-center mt-auto">
         <h1 className="mt-2 text-xl">
           {"Copyright © "}
           <a color="inherit" href="https://osl.vvce.ac.in">
@@ -41,3 +41,5 @@ export default function Footer({ children }: any) {
     </div>
   )
 }
+
+export default Footer

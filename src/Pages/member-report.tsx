@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react"
-import { withRouter } from "react-router-dom"
+import { RouteComponentProps, withRouter } from "react-router-dom"
 import Loader from "react-loader-spinner"
 import { usernames } from "../Assets/data.json"
 
-const MemberReportsPage = (props: any) => {
+const MemberReportsPage: React.FC<RouteComponentProps> = ({ location }) => {
   interface UsernameList {
     [key: string]: string
   }
 
-  let path = props.location.pathname
-  let username: string = path.replace(/\/\w+\//, "")
+  let path = location.pathname
+  let username = path.replace(/\/\w+\//, "")
   const usernameList: UsernameList = usernames
   let memberName = usernameList[username]
 

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Switch, Route } from "react-router-dom"
 
 import "./tailwind.output.css"
@@ -11,10 +11,14 @@ import NotFoundPage from "./Pages/404"
 import MemberReportsPage from "./Pages/member-report"
 import Footer from "./Components/footer"
 
-function App() {
+const App: React.FC = () => {
+  const [isDarkMode, setDarkMode] = useState<boolean>(true)
+  function handleThemeChange() {
+    setDarkMode(!isDarkMode)
+  }
   return (
-    <React.Fragment>
-      <Navbar />
+    <div className={`${isDarkMode ? "theme-dark" : "theme-light"}`}>
+      <Navbar isDarkMode={isDarkMode} onChange={handleThemeChange} />
       <Footer>
         <Switch>
           <Route exact path="/" component={HomePage} />
@@ -24,7 +28,7 @@ function App() {
           <Route component={NotFoundPage} />
         </Switch>
       </Footer>
-    </React.Fragment>
+    </div>
   )
 }
 

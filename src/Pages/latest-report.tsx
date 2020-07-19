@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react"
 import Loader from "react-loader-spinner"
 import { memberList } from "../Assets/data.json"
 
-const ReportPage = () => {
+const ReportPage: React.FC = () => {
   const [loading, setLoading] = useState(true)
-  const [report, setReport]: any = useState([])
+  const [report, setReport] = useState<any>([])
   const [dateInterval, setDateInterval] = useState({
     date: new Date(),
     nextDate: new Date()

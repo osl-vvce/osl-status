@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react"
 import Loader from "react-loader-spinner"
 import { memberList } from "../Assets/data.json"
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
   const [loading, setLoading] = useState(true)
-  const [reporter, setReporter]: any = useState([])
+  const [reporter, setReporter] = useState<any>([])
   const [date, setDate] = useState(new Date())
 
   async function fetchUrl(url: string) {

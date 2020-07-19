@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.theme-dark {
+  --bg: #111;
+  --bgalt: #222;
+  --default: #eee;
+  --tbody: #161616;
+  --tbodyalt: #1c1c1c;
+}
+
+.theme-light {
+  --bg: #2e3550;
+  --bgalt: #eee;
+  --default: #111;
+  --tbody: #e9e9e9;
+  --tbodyalt: #e3e3e3;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   @apply bg-bg;

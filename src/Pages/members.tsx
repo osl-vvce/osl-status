@@ -2,7 +2,7 @@ import React from "react"
 import { memberData } from "../Assets/data.json"
 import { Link } from "react-router-dom"
 
-const MembersPage = () => {
+const MembersPage: React.FC = () => {
   function createData(member: string, usn: string, username: string) {
     return { member, usn, username }
   }
