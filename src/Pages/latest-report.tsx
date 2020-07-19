@@ -97,7 +97,7 @@ const ReportPage = () => {
           <h2 className="text-lg lg:text-2xl mt-2">{`${date
             .toDateString()
             .substring(4)} to ${nextDate.toDateString().substring(4)}`}</h2>
-          <div className="my-12 overflow-x-auto w-full flex justify-center">
+          <div className="my-12 overflow-x-auto w-full flex lg:justify-center">
             <table className="text-default" style={{ minWidth: "1200px" }}>
               <thead className="bg-bg">
                 <tr>
