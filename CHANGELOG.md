@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://gitlab.com/osl-vvce/osl-status/compare/v1.6.1...v2.0.0) (2020-07-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* Used Tailwind CSS instead of Material UI and converted to TypeScript
+
+### Code Refactoring
+
+* Full code rewrite with TypeScript and Tailwind CSS ([884e487](https://gitlab.com/osl-vvce/osl-status/commit/884e4875f6653bb7ff5d767def0c4bebb501d062))
+
 ### [1.6.1](https://gitlab.com/osl-vvce/osl-status/compare/v1.6.0...v1.6.1) (2020-06-12)
 
 
