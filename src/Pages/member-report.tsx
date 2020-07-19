@@ -101,7 +101,7 @@ const MemberReportsPage = (props: any) => {
       ) : (
         <div className="bg-bgalt flex flex-col items-center px-6 lg:px-12">
           <h1 className="text-3xl lg:text-6xl uppercase mt-6">{memberName}</h1>
-          <div className="py-6 lg:my-12 overflow-x-auto w-full flex lg:justify-center">
+          <div className="my-4 lg:my-12 overflow-x-auto w-full flex lg:justify-center">
             <table className="text-default" style={{ minWidth: "1200px" }}>
               <thead className="bg-bg">
                 <tr>

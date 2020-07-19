@@ -15,14 +15,15 @@ function App() {
   return (
     <React.Fragment>
       <Navbar />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/report" component={ReportPage} />
-        <Route exact path="/members" component={MembersPage} />
-        <Route path="/members" component={MemberReportsPage} />
-        <Route component={NotFoundPage} />
-      </Switch>
-      <Footer />
+      <Footer>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/report" component={ReportPage} />
+          <Route exact path="/members" component={MembersPage} />
+          <Route path="/members" component={MemberReportsPage} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </Footer>
     </React.Fragment>
   )
 }
