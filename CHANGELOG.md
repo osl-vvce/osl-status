@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.0](https://gitlab.com/osl-vvce/osl-status/compare/v2.0.1...v2.1.0) (2020-07-20)
+
+
+### Bug Fixes
+
+* Fixing the light theme ([d0618c0](https://gitlab.com/osl-vvce/osl-status/commit/d0618c0155399d0c113c4a43408e2580754fabe5))
+
+
+### Improvement
+
+* Adding more types ([4cea6e5](https://gitlab.com/osl-vvce/osl-status/commit/4cea6e5b39cc5d056aa1f1797107967377727755))
+
 ### [2.0.1](https://gitlab.com/osl-vvce/osl-status/compare/v2.0.0...v2.0.1) (2020-07-19)
 
 
