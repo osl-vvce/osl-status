@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.1](https://gitlab.com/osl-vvce/osl-status/compare/v2.0.0...v2.0.1) (2020-07-19)
+
+
+### Bug Fixes
+
+* Fixed the footer, navbar and reports page ([f20b85d](https://gitlab.com/osl-vvce/osl-status/commit/f20b85d6b4372b125e98a7397046e7f8724b13ca))
+
 ## [2.0.0](https://gitlab.com/osl-vvce/osl-status/compare/v1.6.1...v2.0.0) (2020-07-19)
 
 
