@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Switch, Route } from "react-router-dom"
 
 import "./tailwind.output.css"
@@ -9,17 +9,27 @@ import MembersPage from "./Pages/members"
 import Navbar from "./Components/navbar"
 import NotFoundPage from "./Pages/404"
 import MemberReportsPage from "./Pages/member-report"
-import Footer from "./Components/footer"
+import Layout from "./Components/layout"
 
 const App: React.FC = () => {
-  const [isDarkMode, setDarkMode] = useState<boolean>(true)
-  function handleThemeChange() {
-    setDarkMode(!isDarkMode)
+  const [theme, changeTheme] = useState(1)
+
+  useEffect(() => {
+    if (localStorage.getItem("theme")) {
+      const t = Number(localStorage.getItem("theme"))
+      changeTheme(t)
+    }
+  }, [])
+
+  const switchTheme = () => {
+    const next = theme === 0 ? 1 : 0
+    changeTheme(next)
+    localStorage.setItem("theme", `${next}`)
   }
   return (
-    <div className={`${isDarkMode ? "theme-dark" : "theme-light"}`}>
-      <Navbar isDarkMode={isDarkMode} onChange={handleThemeChange} />
-      <Footer>
+    <div className={`${theme ? "theme-dark" : "theme-light"}`}>
+      <Navbar isDarkMode={theme} onChange={switchTheme} />
+      <Layout>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/report" component={ReportPage} />
@@ -27,7 +37,7 @@ const App: React.FC = () => {
           <Route path="/members" component={MemberReportsPage} />
           <Route component={NotFoundPage} />
         </Switch>
-      </Footer>
+      </Layout>
     </div>
   )
 }

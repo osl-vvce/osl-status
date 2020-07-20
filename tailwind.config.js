@@ -12,6 +12,7 @@ module.exports = {
         bg: "var(--bg)",
         bgalt: "var(--bgalt)",
         default: "var(--default)",
+        primary: "var(--primary)",
         tbody: "var(--tbody)",
         tbodyalt: "var(--tbodyalt)"
       },

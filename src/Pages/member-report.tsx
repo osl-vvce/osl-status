@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { RouteComponentProps, withRouter } from "react-router-dom"
 import Loader from "react-loader-spinner"
 import { usernames } from "../Assets/data.json"
+import NotFoundPage from "./404"
 
 const MemberReportsPage: React.FC<RouteComponentProps> = ({ location }) => {
   interface UsernameList {
@@ -98,7 +99,7 @@ const MemberReportsPage: React.FC<RouteComponentProps> = ({ location }) => {
         >
           <Loader type="Puff" color="#EEE" height={100} width={100} />
         </div>
-      ) : (
+      ) : username in usernames ? (
         <div className="bg-bgalt flex flex-col items-center px-6 lg:px-12">
           <h1 className="text-3xl lg:text-6xl uppercase mt-6">{memberName}</h1>
           <div className="my-4 lg:my-12 overflow-x-auto w-full flex lg:justify-center">
@@ -143,6 +144,8 @@ const MemberReportsPage: React.FC<RouteComponentProps> = ({ location }) => {
             </table>
           </div>
         </div>
+      ) : (
+        <NotFoundPage />
       )}
     </React.Fragment>
   )
