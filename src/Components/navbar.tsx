@@ -32,9 +32,9 @@ const Navbar: React.FC<Props> = ({ isDarkMode, onChange }) => {
             className="text-primary p-1 lg:mx-1 focus:outline-none"
           >
             {isDarkMode === 1 ? (
-              <FaMoon className="w-6 h-6 fill-current" />
+              <FaMoon className="w-4 h-4 lg:w-5 lg:h-5 fill-current" />
             ) : (
-              <FaSun className="w-6 h-6 fill-current" />
+              <FaSun className="w-4 h-4 lg:w-5 lg:h-5 fill-current" />
             )}
           </button>
         </nav>
