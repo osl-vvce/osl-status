@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { RouteComponentProps, withRouter } from "react-router-dom"
+import { RouteComponentProps } from "react-router-dom"
 import Loader from "react-loader-spinner"
 import { usernames } from "../Assets/data.json"
 import NotFoundPage from "./404"
@@ -151,4 +151,4 @@ const MemberReportsPage: React.FC<RouteComponentProps> = ({ location }) => {
   )
 }
 
-export default withRouter(MemberReportsPage)
+export default MemberReportsPage

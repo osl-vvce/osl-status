@@ -15,18 +15,18 @@ const Navbar: React.FC<Props> = ({ isDarkMode, onChange }) => {
           <h1 className="lg:text-xl font-semibold text-primary">OSL Weekly</h1>
         </Link>
         <nav className="font-light flex">
-          <a
+          <Link
             className="p-1 lg:mx-1 text-sm lg:text-base text-primary"
-            href="/report"
+            to="/report"
           >
             Report
-          </a>
-          <a
+          </Link>
+          <Link
             className="p-1 lg:mx-1 text-sm lg:text-base text-primary"
-            href="/members"
+            to="/members"
           >
             Members
-          </a>
+          </Link>
           <button
             onClick={onChange}
             className="text-primary p-1 lg:mx-1 focus:outline-none"
