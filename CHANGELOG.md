@@ -1,5 +1,17 @@
 # Changelog
 
+### [2.1.1](https://gitlab.com/osl-vvce/osl-status/compare/v2.1.0...v2.1.1) (2020-07-28)
+
+
+### Bug Fixes
+
+* fixed the responsiveness of the navbar ([8b14767](https://gitlab.com/osl-vvce/osl-status/commit/8b14767a52824f601b84d76de051c3cbc6e7dc07))
+
+
+### Performance Improvements
+
+* Changed for navbar links for anchor tag to Link ([2d615eb](https://gitlab.com/osl-vvce/osl-status/commit/2d615eb62ee9790a22fcfb2a9d0888efa567777e))
+
 ## [2.1.0](https://gitlab.com/osl-vvce/osl-status/compare/v2.0.1...v2.1.0) (2020-07-20)
 
 
