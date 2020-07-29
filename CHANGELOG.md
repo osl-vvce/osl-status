@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.1.2](https://gitlab.com/osl-vvce/osl-status/compare/v2.1.1...v2.1.2) (2020-07-29)
+
+
+### Performance Improvements
+
+* Updated the stale state for home page" ([7fb9e02](https://gitlab.com/osl-vvce/osl-status/commit/7fb9e0233f8884e4c417033027c47f8d3cdecb17))
+
 ### [2.1.1](https://gitlab.com/osl-vvce/osl-status/compare/v2.1.0...v2.1.1) (2020-07-28)
 
 
