@@ -1,5 +1,5 @@
 import React from "react"
-import { useQuery } from "react-query"
+import { useQuery, BaseQueryOptions } from "react-query"
 import Loader from "react-loader-spinner"
 import { memberList } from "../Assets/data.json"
 
@@ -10,6 +10,11 @@ const HomePage: React.FC = () => {
     _nanoseconds: number
   }
 
+  const queryOptions: BaseQueryOptions = {
+    retry: 1,
+    staleTime: 3600000
+  }
+
   const fetchMemberMap = async () => {
     const response = await fetch(
       "https://polar-depths-36905.herokuapp.com/info"
@@ -17,7 +22,11 @@ const HomePage: React.FC = () => {
     return response.json()
   }
 
-  const { isLoading, data } = useQuery("memberMap", fetchMemberMap)
+  const { isLoading, data } = useQuery(
+    "memberMap",
+    fetchMemberMap,
+    queryOptions
+  )
 
   if (isLoading) {
     return (
