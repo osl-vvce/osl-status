@@ -73,7 +73,7 @@ const MemberReportsPage: React.FC<RouteComponentProps> = ({ location }) => {
   }
 
   function sortRowsByDate(array: Rows[]) {
-    return array.sort(function(a, b) {
+    return array.sort(function (a, b) {
       var x = a.id
       var y = b.id
       return x > y ? -1 : x < y ? 1 : 0
@@ -94,7 +94,7 @@ const MemberReportsPage: React.FC<RouteComponentProps> = ({ location }) => {
             top: "50%",
             left: "50%",
             marginTop: "-50px",
-            marginLeft: "-50px"
+            marginLeft: "-50px",
           }}
         >
           <Loader type="Puff" color="#EEE" height={100} width={100} />
@@ -135,7 +135,7 @@ const MemberReportsPage: React.FC<RouteComponentProps> = ({ location }) => {
                     <td className="font-normal py-2 px-2 lg:py-2 lg:px-3 text-sm lg:text-base">
                       <div dangerouslySetInnerHTML={{ __html: row.fun }} />
                     </td>
-                    <td className="font-normal py-2 px-2 lg:py-2 lg:px-3 text-sm lg:text-base">
+                    <td className="font-normal py-2 px-2 lg:py-2 lg:px-3 text-sm lg:text-base text-center">
                       {row.reporter}
                     </td>
                   </tr>

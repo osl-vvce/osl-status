@@ -7,7 +7,7 @@ const ReportPage: React.FC = () => {
   const [report, setReport] = useState<any>([])
   const [dateInterval, setDateInterval] = useState({
     date: new Date(),
-    nextDate: new Date()
+    nextDate: new Date(),
   })
 
   async function fetchUrl(url: string) {
@@ -18,7 +18,7 @@ const ReportPage: React.FC = () => {
     setReport(data)
     setDateInterval({
       date: new Date(date.setDate(date.getDate() - 7)),
-      nextDate: new Date(data[0]["timeStamp"]["_seconds"] * 1000)
+      nextDate: new Date(data[0]["timeStamp"]["_seconds"] * 1000),
     })
     setLoading(false)
   }
@@ -86,7 +86,7 @@ const ReportPage: React.FC = () => {
             top: "50%",
             left: "50%",
             marginTop: "-50px",
-            marginLeft: "-50px"
+            marginLeft: "-50px",
           }}
         >
           <Loader type="Puff" color="#EEE" height={100} width={100} />
@@ -114,10 +114,10 @@ const ReportPage: React.FC = () => {
                     key={row.source}
                     className={`${isOdd("bg-tbody", "bg-tbodyalt", i)}`}
                   >
-                    <td className="font-normal py-2 px-2 lg:py-2 lg:px-3 text-sm lg:text-base">
+                    <td className="font-normal py-2 px-2 lg:py-2 lg:px-3 text-sm lg:text-base text-center">
                       {row.source}
                     </td>
-                    <td className="font-normal py-2 px-2 lg:py-2 lg:px-3 text-sm lg:text-base">
+                    <td className="font-normal py-2 px-2 lg:py-2 lg:px-3 text-sm lg:text-base text-center">
                       {row.osl}
                     </td>
                     <td className="font-normal py-2 px-2 lg:py-2 lg:px-3 text-sm lg:text-base">
@@ -126,7 +126,7 @@ const ReportPage: React.FC = () => {
                     <td className="font-normal py-2 px-2 lg:py-2 lg:px-3 text-sm lg:text-base">
                       <div dangerouslySetInnerHTML={{ __html: row.future }} />
                     </td>
-                    <td className="font-normal py-2 px-2 lg:py-2 lg:px-3 text-sm lg:text-base">
+                    <td className="font-normal py-2 px-2 lg:py-2 lg:px-3 text-sm lg:text-base text-center">
                       {row.reporter}
                     </td>
                   </tr>
