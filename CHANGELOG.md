@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.1.3](https://gitlab.com/osl-vvce/osl-status/compare/v2.1.2...v2.1.3) (2020-08-04)
+
+
+### Bug Fixes
+
+* Fixed the alignemnt of the Latest Report table and the Member's Report Table ([7dbd87b](https://gitlab.com/osl-vvce/osl-status/commit/7dbd87bddf3c8308cda26a0cf3d8a4b5ef4d3b70))
+
 ### [2.1.2](https://gitlab.com/osl-vvce/osl-status/compare/v2.1.1...v2.1.2) (2020-07-29)
 
 
