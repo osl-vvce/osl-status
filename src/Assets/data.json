@@ -26,7 +26,9 @@
     "Nimesh M",
     "Patil Chanchal Vinod",
     "Kratee Pareek",
-    "Vaibhav D S"
+    "Vaibhav D S",
+    "Nidhi R",
+    "Megha Subramanya"
   ],
   "usernames": {
     "srikeerthi_s": "Srikeerthi S",
@@ -55,7 +57,9 @@
     "nimeshm": "Nimesh M",
     "chanchalvp": "Patil Chanchal Vinod",
     "kratee": "Kratee Pareek",
-    "vaibhavds": "Vaibhav D S"
+    "vaibhavds": "Vaibhav D S",
+    "nidhi_r": "Nidhi R",
+    "meghasubramanya1104": "Megha Subramanya"
   },
   "memberData": {
     "Srikeerthi S": { "usn": "4VV17CS096", "username": "srikeerthi_s" },
@@ -87,6 +91,11 @@
     "Nimesh M": { "usn": "4VV18CS093", "username": "nimeshm" },
     "Patil Chanchal Vinod": { "usn": "4VV18CS101", "username": "chanchalvp" },
     "Kratee Pareek": { "usn": "4VV18IS044", "username": "kratee" },
-    "Vaibhav D S": { "usn": "4VV18CS165", "username": "vaibhavds" }
+    "Vaibhav D S": { "usn": "4VV18CS165", "username": "vaibhavds" },
+    "Nidhi R": { "usn": "4VV18CS091", "username": "nidhi_r" },
+    "Megha Subramanya": {
+      "usn": "4VV18CS077",
+      "username": "meghasubramanya1104"
+    }
   }
 }
