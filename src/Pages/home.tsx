@@ -1,5 +1,5 @@
 import React from "react"
-import { useQuery, BaseQueryOptions } from "react-query"
+import { useQuery, UseQueryOptions } from "react-query"
 import Loader from "react-loader-spinner"
 import { memberList } from "../Assets/data.json"
 
@@ -10,9 +10,9 @@ const HomePage: React.FC = () => {
     _nanoseconds: number
   }
 
-  const queryOptions: BaseQueryOptions = {
+  const queryOptions: UseQueryOptions = {
     retry: 1,
-    staleTime: 3600000
+    staleTime: 3600000,
   }
 
   const fetchMemberMap = async () => {
@@ -36,7 +36,7 @@ const HomePage: React.FC = () => {
           top: "50%",
           left: "50%",
           marginTop: "-50px",
-          marginLeft: "-50px"
+          marginLeft: "-50px",
         }}
       >
         <Loader type="Puff" color="#EEE" height={100} width={100} />
