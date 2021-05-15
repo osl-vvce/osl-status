@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://gitlab.com/osl-vvce/osl-status/compare/v2.1.3...v3.0.0) (2021-05-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* Updated all the packages to latest versions
+
+### Bug Fixes
+
+* fixed bugs in react query ([cdefb84](https://gitlab.com/osl-vvce/osl-status/commit/cdefb846612b573bb9421705f3406116a8452f4f))
+
 ### [2.1.3](https://gitlab.com/osl-vvce/osl-status/compare/v2.1.2...v2.1.3) (2020-08-04)
 
 
