@@ -9,7 +9,7 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-bg flex flex-col justify-center items-center">
+    <footer className="bg-bg flex flex-col justify-center items-center mt-auto">
       <h1 className="mt-2 text-xl text-primary">
         {"Copyright © "}
         <a color="inherit" href="https://osl.vvce.ac.in">
