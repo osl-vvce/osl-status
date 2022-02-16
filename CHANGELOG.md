@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://gitlab.com/osl-vvce/osl-status/compare/v3.0.1...v4.0.0) (2022-02-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* The stack now used remix instead of cra
+
+### Performance Improvements
+
+* Updated the stack to use remix ([3b10992](https://gitlab.com/osl-vvce/osl-status/commit/3b10992ede32829a4c069b020899cb9706ed225e))
+
 ### [3.0.1](https://gitlab.com/osl-vvce/osl-status/compare/v3.0.0...v3.0.1) (2021-05-16)
 
 
