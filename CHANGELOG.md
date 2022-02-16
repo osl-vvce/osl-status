@@ -1,5 +1,13 @@
 # Changelog
 
+### [4.0.2](https://gitlab.com/osl-vvce/osl-status/compare/v4.0.1...v4.0.2) (2022-02-16)
+
+
+### Bug Fixes
+
+* fixed typo in netlify.toml ([57516b8](https://gitlab.com/osl-vvce/osl-status/commit/57516b82b1d5bc4b38b1a4469d713b8035d55b0a))
+* Updated Netlify toml ([75fb589](https://gitlab.com/osl-vvce/osl-status/commit/75fb589a3a4537e252756cb355ff8fb131c82edd))
+
 ### [4.0.1](https://gitlab.com/osl-vvce/osl-status/compare/v4.0.0...v4.0.1) (2022-02-16)
 
 
