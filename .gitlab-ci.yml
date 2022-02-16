@@ -8,7 +8,7 @@ publish:
   only:
     refs:
       - master
-  image: node:12
+  image: node:16
   stage: release
   script:
     - npx semantic-release

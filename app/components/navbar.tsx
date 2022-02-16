@@ -1,5 +1,4 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import { Link } from "remix"
 import { FaSun, FaMoon } from "react-icons/fa"
 
 interface Props {
@@ -9,7 +8,7 @@ interface Props {
 
 const Navbar: React.FC<Props> = ({ isDarkMode, onChange }) => {
   return (
-    <header className="fixed top-0 w-full shadow-lg">
+    <header className="w-full shadow-lg">
       <div className="flex bg-bg p-2 lg:p-4 justify-between uppercase items-center">
         <Link to="/">
           <h1 className="lg:text-xl font-semibold text-primary">OSL Weekly</h1>

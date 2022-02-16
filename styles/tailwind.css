@@ -4,7 +4,7 @@
 
 .theme-dark {
   --bg: #111;
-  --bgalt: #222;
+  --bgalt: #181818;
   --default: #eee;
   --primary: #eee;
   --tbody: #161616;
@@ -23,13 +23,6 @@
 body {
   font-family: "Montserrat", sans-serif;
   @apply bg-bg;
-  padding-top: 60px;
-}
-
-@media (max-width: 979px) {
-  body {
-    padding-top: 30px;
-  }
 }
 
 ::-webkit-scrollbar {
