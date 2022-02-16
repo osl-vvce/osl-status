@@ -1,6 +1,6 @@
 # OSL Weekly Report Website
 
-![Update](https://img.shields.io/badge/July-2020-blue.svg?longCache=true&style=for-the-badge)
+![Update](https://img.shields.io/badge/May-2021-blue.svg?longCache=true&style=for-the-badge)
 ![Gitlab package.json version](https://img.shields.io/badge/dynamic/json?color=blue&label=version&query=version&url=https://gitlab.com/osl-vvce/osl-status/-/raw/master/package.json&style=for-the-badge)
 ![Gitlab Workflow Status](https://img.shields.io/badge/buiild-passing-blue?style=for-the-badge)
 ![Gitlab](https://img.shields.io/badge/license-mit-blue?style=for-the-badge)

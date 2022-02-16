@@ -1,5 +1,28 @@
 # Changelog
 
+### [3.0.1](https://gitlab.com/osl-vvce/osl-status/compare/v3.0.0...v3.0.1) (2021-05-16)
+
+
+### Performance Improvements
+
+* cached the latest report page ([459ea9d](https://gitlab.com/osl-vvce/osl-status/commit/459ea9d969b306b61825b8aa2c6817d64b164a05))
+
+
+### Reverts
+
+* footer margin reverted ([f27ca7a](https://gitlab.com/osl-vvce/osl-status/commit/f27ca7a2b230653c116143184a5023aa03409a0e))
+
+## [3.0.0](https://gitlab.com/osl-vvce/osl-status/compare/v2.1.3...v3.0.0) (2021-05-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* Updated all the packages to latest versions
+
+### Bug Fixes
+
+* fixed bugs in react query ([cdefb84](https://gitlab.com/osl-vvce/osl-status/commit/cdefb846612b573bb9421705f3406116a8452f4f))
+
 ### [2.1.3](https://gitlab.com/osl-vvce/osl-status/compare/v2.1.2...v2.1.3) (2020-08-04)
 
 

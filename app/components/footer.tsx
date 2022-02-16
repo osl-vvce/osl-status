@@ -4,7 +4,7 @@ import {
   AiFillInstagram,
   AiOutlineGithub,
   AiOutlineTwitter,
-  AiFillLinkedin
+  AiFillLinkedin,
 } from "react-icons/ai"
 
 const Footer: React.FC = () => {
