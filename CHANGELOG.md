@@ -1,5 +1,12 @@
 # Changelog
 
+### [4.0.1](https://gitlab.com/osl-vvce/osl-status/compare/v4.0.0...v4.0.1) (2022-02-16)
+
+
+### Bug Fixes
+
+* 404 page ([99f1451](https://gitlab.com/osl-vvce/osl-status/commit/99f14517923546bf450a743eafaade0d948ea00d))
+
 ## [4.0.0](https://gitlab.com/osl-vvce/osl-status/compare/v3.0.1...v4.0.0) (2022-02-16)
 
 
