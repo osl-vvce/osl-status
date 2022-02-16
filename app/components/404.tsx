@@ -1,5 +1,4 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import { Link } from "remix"
 import shuttle from "../assets/shuttle.png"
 
 const NotFoundPage = () => {
