@@ -13,6 +13,12 @@ OSL Weekly Report Website
     </a>
 </p>
 
+<p align="center">
+  <a href="https://app.netlify.com/sites/osl/deploys" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/39990b87-7b74-4f1b-86f7-30edbf3e9884/deploy-status" alt="Netlify Status" />
+  </a>
+</p>
+
 ## What's this?
 
 This website was created to view the weekly status reports of different members from OSL.
@@ -46,11 +52,11 @@ Shows the list of members when clicked on gives all of there reports till date.
 
 ## Releases
 
-Want to know what changed? Check [Releases](https://gitlab.com/osl-vvce/osl-status/-/releases)
+Want to know what changed? Check [Releases](https://github.com/osl-vvce/osl-status/releases)
 
 ## Technology Stack
 
-- [React.js](https://www.reactjs.org)
+- [Remix](https://remix.run)
 - [Tailwind CSS](https://tailwindcss.com)
 - [TypeScript](https://www.typescriptlang.org)
 
