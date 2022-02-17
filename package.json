@@ -1,6 +1,6 @@
 {
   "name": "osl-status",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "private": true,
   "scripts": {
     "build": "npm run build:css && remix build",

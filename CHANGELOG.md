@@ -1,5 +1,12 @@
 # Changelog
 
+### [4.0.3](https://github.com/osl-vvce/osl-status/compare/v4.0.2...v4.0.3) (2022-02-17)
+
+
+### Bug Fixes
+
+* updated semantic release config ([e5fbb60](https://github.com/osl-vvce/osl-status/commit/e5fbb608d598ba62878d191c6db3327dfccc1c3f))
+
 ### [4.0.2](https://gitlab.com/osl-vvce/osl-status/compare/v4.0.1...v4.0.2) (2022-02-16)
 
 
