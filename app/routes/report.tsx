@@ -1,7 +1,8 @@
 import { ErrorBoundaryComponent, useLoaderData } from "remix"
+import { BASEURL } from "~/utils/constants"
 
 export async function loader() {
-  let res = await fetch("https://polar-depths-36905.herokuapp.com/report")
+  let res = await fetch(`${BASEURL}/report`)
   return res.json()
 }
 

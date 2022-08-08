@@ -1,14 +1,8 @@
-// export async function loader() {
-//   let res = await fetch("https://polar-depths-36905.herokuapp.com/members")
-//   return res.json()
-// }
-
 import { LoaderFunction, useLoaderData } from "remix"
+import { BASEURL } from "~/utils/constants"
 
 export let loader: LoaderFunction = async ({ params }) => {
-  let res = await fetch(
-    `https://polar-depths-36905.herokuapp.com/reports/${params.memberId}`
-  )
+  let res = await fetch(`${BASEURL}/reports/${params.memberId}`)
   return res.json()
 }
 

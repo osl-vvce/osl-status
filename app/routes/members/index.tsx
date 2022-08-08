@@ -1,7 +1,8 @@
 import { Link, useLoaderData } from "remix"
+import { BASEURL } from "~/utils/constants"
 
 export async function loader() {
-  let res = await fetch("https://polar-depths-36905.herokuapp.com/members")
+  let res = await fetch(`${BASEURL}/members`)
   return res.json()
 }
 
