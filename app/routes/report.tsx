@@ -1,4 +1,4 @@
-import { useLoaderData } from "remix"
+import { ErrorBoundaryComponent, useLoaderData } from "remix"
 
 export async function loader() {
   let res = await fetch("https://polar-depths-36905.herokuapp.com/report")
@@ -57,6 +57,15 @@ const Report: React.FC = () => {
           </tbody>
         </table>
       </div>
+    </div>
+  )
+}
+
+export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => {
+  return (
+    <div className="bg-bgalt flex flex-col items-center px-6 lg:px-12 min-h-screen-80">
+      <h1 className="text-3xl lg:text-6xl uppercase mt-6">Report</h1>
+      <p className="mt-2 text-3xl">No reports to show yet, come back later</p>
     </div>
   )
 }
