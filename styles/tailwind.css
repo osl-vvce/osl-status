@@ -4,9 +4,10 @@
 
 .theme-dark {
   --bg: #111;
-  --bgalt: #181818;
+  --bgalt: #191919;
   --default: #eee;
   --primary: #eee;
+  --secondary: #111;
   --tbody: #161616;
   --tbodyalt: #1c1c1c;
 }
@@ -16,13 +17,14 @@
   --bgalt: #eee;
   --default: #111;
   --primary: #eee;
+  --secondary: #fff;
   --tbody: #e9e9e9;
   --tbodyalt: #e3e3e3;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
-  @apply bg-bg;
+  @apply bg-bgalt;
 }
 
 ::-webkit-scrollbar {

@@ -7,10 +7,11 @@ module.exports = {
         bgalt: "var(--bgalt)",
         default: "var(--default)",
         primary: "var(--primary)",
+        secondary: "var(--secondary)",
         tbody: "var(--tbody)",
-        tbodyalt: "var(--tbodyalt)"
-      }
-    }
+        tbodyalt: "var(--tbodyalt)",
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 }
