@@ -1,5 +1,12 @@
 # Changelog
 
+### [4.1.1](https://github.com/osl-vvce/osl-status/compare/v4.1.0...v4.1.1) (2022-08-08)
+
+
+### Bug Fixes
+
+* created a file for baseurl ([6214a3c](https://github.com/osl-vvce/osl-status/commit/6214a3c090b63639f0b95648e2105fd1f2802256))
+
 ## [4.1.0](https://github.com/osl-vvce/osl-status/compare/v4.0.3...v4.1.0) (2022-02-23)
 
 
