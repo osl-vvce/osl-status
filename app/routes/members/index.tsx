@@ -48,7 +48,7 @@ const Members: React.FC = () => {
                     </div>
                   </td>
                   <td className="font-normal text-sm lg:text-base text-right">
-                    <div className="py-2 px-5 lg:py-3 lg:px-6">
+                    <div className="py-2 px-5 lg:py-3 lg:px-6 uppercase">
                       {details.usn}
                     </div>
                   </td>
