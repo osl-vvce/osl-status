@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.0](https://github.com/osl-vvce/osl-status/compare/v4.1.1...v4.2.0) (2022-10-17)
+
+
+### Improvement
+
+* Made USN uppercase ([80d8807](https://github.com/osl-vvce/osl-status/commit/80d8807834bee93e5b069dd737158dc460b4c981))
+
 ### [4.1.1](https://github.com/osl-vvce/osl-status/compare/v4.1.0...v4.1.1) (2022-08-08)
 
 
