@@ -1,1 +1,1 @@
-export const BASEURL = "https://polar-depths-36905.herokuapp.com"
+export const BASEURL = "https://osl-status.fly.dev"
